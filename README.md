@@ -1,6 +1,6 @@
 - 👋 Hi, I’m Banu Begum
 - 👀 I’m interested in DATA SCIENCE, R programming, Python programming
-- 🌱 I’m currently learning Data Analysis, Python, R
+- 🌱 I’m currently learning Data Science, Data Analysis, Python, R
 - 📫 How to reach me WhatsApp 9148075555, Email.Id banubegum76@gmail.com
 - 😄 Pronouns: She/Her
 
