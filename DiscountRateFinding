@@ -1,0 +1,27 @@
+# Function to calculate the total cost before any discount
+def calculate_total_cost(cart):
+    total_cost = sum(cart)
+    return total_cost
+#function to apply 10% discount if the total cost exceeds $100
+def apply_discount(total_cost):
+    if total_cost >100:
+        discount_amount = 0.1 *total_cost
+        total_cost = discount_amount
+    return total_cost
+# Function to apply an additional 5% discount for user with premium membership
+def apply_premium_discount(total_cost,is_premium_member):
+    if is_premium_member:
+        premium_discount = 0.5 * total_cost
+        total_cost = premium_discount
+    return total_cost
+# Function to calculate the final cost considering all discount
+def calculate_final_cost(cart,is_premium_member):
+    total_cost = calculate_total_cost(cart)
+    total_cost = apply_discount(total_cost)
+    total_cost = apply_premium_discount(total_cost,is_premium_member)
+    return total_cost
+# sample Usage
+shopping_cart = [30,50,40,60] # Prices of items in the cart
+is_premium_member = True
+final_cost = calculate_final_cost(shopping_cart, is_premium_member)
+print(f"Final Cost After Discount:${final_cost}")
