@@ -1,0 +1,33 @@
+#Function to add a new  to the to-do list
+def add_task(todo_list,task):
+    todo_list.append({'task': task,'completed':False})
+    print(f"Task'{task}' added to the to-do List.")
+
+#Function to mark a task as completed
+def complete_task(todo_list, task_index):
+    if 0<= task_index < len(todo_list):
+        todo_list[task_index]['completed']= True
+        print(f"Task'{todo_list[task_index]['task']}' marked as completed.")
+    else:
+        print("Invalid task index.")
+#Function to view the list of tasks
+def view_tasks(todo_list):
+    print('To-Do List:')
+    for index, task in enumerate(todo_list):
+        status = 'Completed'if task['completed'] else "Pending"
+        print(f'{index+1}. {task['task']} - {status}')
+
+#Sample usage
+if __name__ == "__main__":
+#Initialize an empty to-do list
+    my_todo_list = []
+#Add tasks to the to-do list
+    add_task(my_todo_list,"Complete project proposal")
+    add_task(my_todo_list,'Buy groceries')
+    add_task(my_todo_list,'Exercise for 30 minutes')
+# View the initial to-do list
+    view_tasks(my_todo_list)
+# mark a task as completed
+    complete_task(my_todo_list,1)
+#view the updated to-do list
+    view_tasks(my_todo_list)
